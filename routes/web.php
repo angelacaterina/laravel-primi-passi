@@ -14,7 +14,29 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $posts = [
+        [
+            'title' => 'First Post',
+            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam repudiandae atque reprehenderit dignissimos. Quis tempore doloribus quasi. Error, amet laudantium tempora quod saepe repudiandae dolorum! Enim id animi dolorum voluptas?',
+        ],
+        [
+            'title' => 'Second Post',
+            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam repudiandae atque reprehenderit dignissimos. Quis tempore doloribus quasi. Error, amet laudantium tempora quod saepe repudiandae dolorum! Enim id animi dolorum voluptas?',
+        ],
+        [
+            'title' => 'Third Post',
+            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam repudiandae atque reprehenderit dignissimos. Quis tempore doloribus quasi. Error, amet laudantium tempora quod saepe repudiandae dolorum! Enim id animi dolorum voluptas?',
+        ],
+        [
+            'title' => 'Fourth Post',
+            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam repudiandae atque reprehenderit dignissimos. Quis tempore doloribus quasi. Error, amet laudantium tempora quod saepe repudiandae dolorum! Enim id animi dolorum voluptas?',
+        ],
+        [
+            'title' => 'Fifth Post',
+            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam repudiandae atque reprehenderit dignissimos. Quis tempore doloribus quasi. Error, amet laudantium tempora quod saepe repudiandae dolorum! Enim id animi dolorum voluptas?',
+        ]
+    ];
+    return view('welcome', compact('posts'));
 });
 Route::get('blog', function () {
     return view('blog');
